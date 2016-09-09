@@ -1,0 +1,18 @@
+function strtoarr(str){
+    var arr = []
+    var queue = ""
+    var patt = new RegExp(/^[a-zA-Z]*$/)
+
+    for(var i = 0; i < str.length; i++){
+        if(str[i] != " " || patt.test(str[i])){
+            queue += str[i]
+            if(str[i+1] == " " || !(patt.test(str[i+1]))){
+                arr.push(queue)
+                queue=""
+            }
+        }
+    }
+    arr.push(queue)
+    return arr
+}
+console.log(strtoarr("love is freedome  WWOW"))
