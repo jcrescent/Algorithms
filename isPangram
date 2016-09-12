@@ -1,0 +1,19 @@
+function isPangram(str){
+	var lower = str.toLowerCase()
+	var alpha = 'abcdefghijklmnopqrstuvwxyz'
+	for(var i = 0; i<alpha.length; i++){
+		var contains = false
+		for (var j = 0; j<lower.length;j++){
+			if(alpha[i] == lower[j]){
+				contains = true
+			}
+		}
+		if (!contains){
+			return contains 
+		}
+	}
+	return contains
+}
+
+isPangram('The quick brown fox jumps over the lazy dog')
+isPangram("This does not have all the letters")
